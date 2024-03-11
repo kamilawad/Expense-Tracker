@@ -4,30 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/common/utilities.css">
+    <link rel="stylesheet" href="styles/index.css">
     <title>Expense Tracker</title>
 </head>
 <body>
     <header class="flex center">
         <h1>Expense Tracker</h1>
     </header>
-    <form class="flex center gap">
-        <div>
-            <select class="form-select" id="type" required>
-                <option value="income">Income</option>
-                <option value="expense">Expense</option>
-            </select>
-        </div>
-        <div>
-            <input type="number" placeholder="Enter Amount" id="amount" required>
-        </div>
-        <div>
-            <select id="currency" required>
-                <option value="" disabled selected>Select Currency</option>
-            </select>
-        </div>
-        <button type="submit" class="add-btn">Add</button>
-    </form>
-    <h3>Balance: $<span id="totalbalance">0</span></h3>
-    <ul id="transactions"></ul>
+    <section class="flex center column gap">
+        <form class="flex center gap">
+            <div>
+                <select class="form-select" id="type" required>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+            </div>
+            <div>
+                <input type="number" placeholder="Enter Amount" id="amount" required>
+            </div>
+            <div>
+                <select id="currency" required>
+                    <option value="" disabled selected>Select Currency</option>
+                </select>
+            </div>
+            <button type="submit" class="add-btn">Add</button>
+        </form>
+        <h3>Balance: $<span id="totalbalance">0</span></h3>
+        <ul class="flex column center" id="transactions">
+            <li>546</li>
+            <li>544</li>
+        </ul>
+    </section>
 </body>
 </html>

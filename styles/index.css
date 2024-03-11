@@ -1,0 +1,39 @@
+header {
+    margin-top: 10px;
+}
+
+input, select {
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+}
+
+select:focus {
+    border-color: #0668d1;
+}
+
+input:focus {
+    border-color: #0668d1;
+}
+
+.add-btn {
+    background-color: #0668d1;
+    padding: 14px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #064281;
+}
+
+li {
+    background-color: #ccc;
+    min-width: 300px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
