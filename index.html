@@ -12,7 +12,7 @@
         <h1>Expense Tracker</h1>
     </header>
     <section class="flex center column gap">
-        <form class="flex center gap">
+        <form class="flex center gap" id="transaction-form">
             <div>
                 <select class="form-select" id="type" required>
                     <option value="income">Income</option>
@@ -23,17 +23,33 @@
                 <input type="number" placeholder="Enter Amount" id="amount" required>
             </div>
             <div>
-                <select id="currencies" required>
+                <select id="currency" required>
                     <option value="" disabled selected>Select Currency</option>
+                    <option value="USD">USD</option>
                 </select>
             </div>
             <button type="submit" class="add-btn">Add</button>
         </form>
         <h3>Balance: $<span id="totalbalance">0</span></h3>
         <ul class="flex column center" id="transactions">
-            <li>546</li>
-            <li>544</li>
+            <li>500$</li>
+            <li>544$</li>
         </ul>
+        <div class="flex center gap">
+            <select id="filterByType">
+                <option value="all">All</option>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+
+            <input type="number" id="amountFromFilter" placeholder="Amount from" min="0">
+
+            <input type="number" id="amountToFilter" placeholder="Amount To" min="0">
+
+            <select id="currencyFilter">
+                <option value="all" disabled selected>Filter By Currency:</option>
+            </select>
+        </div>
     </section>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="scripts/script.js"></script>
